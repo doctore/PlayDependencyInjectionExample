@@ -1,12 +1,45 @@
-2014-11-01 12:31:13,895 - [INFO] - from play in pool-4-thread-4 
+2015-06-09 19:44:58,605 - [INFO] - from play in pool-4-thread-4 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-11-01 12:31:29,459 - [INFO] - from play in play-internal-execution-context-1 
+2015-06-09 19:45:10,289 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-11-01 12:31:30,831 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+2015-06-09 19:45:11,529 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+----------- WITHOUT QUALIFIER -----------
+
+2015-06-09 19:45:11,558 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+Test dao
+
+2015-06-09 19:45:11,558 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
 First service / Second service / Test dao
 
-2014-11-01 12:31:30,941 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+2015-06-09 19:45:11,558 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+----------- WITH QUALIFIER -----------
+
+2015-06-09 19:45:11,558 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+First test qualifier dao
+
+2015-06-09 19:45:11,558 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+First test qualifier dao
+
+2015-06-09 19:45:37,894 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-06-09 19:45:37,903 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+----------- WITHOUT QUALIFIER -----------
+
+2015-06-09 19:45:37,905 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
 Test dao
+
+2015-06-09 19:45:37,905 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+First service / Second service / Test dao
+
+2015-06-09 19:45:37,905 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+----------- WITH QUALIFIER -----------
+
+2015-06-09 19:45:37,905 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+First test qualifier dao
+
+2015-06-09 19:45:37,905 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+Second test qualifier dao
 

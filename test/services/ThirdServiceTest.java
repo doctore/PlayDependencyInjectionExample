@@ -8,13 +8,13 @@ import org.play.dependencyinjection.DependencyInjectionPool;
 import org.play.dependencyinjection.exceptions.DependencyInjectionException;
 import org.play.dependencyinjection.resolvers.DependencyInjectionResolver;
 
-import services.impl.SecondService;
-import services.spi.ISecondService;
+import services.impl.ThirdService;
+import services.spi.IThirdService;
 import configuration.Constants;
 
-public class SecondServiceTest {
+public class ThirdServiceTest {
 
-	private static ISecondService iSecondService;
+	private static IThirdService iThirdService;
 
 
     @BeforeClass
@@ -27,17 +27,18 @@ public class SecondServiceTest {
 
 		DependencyInjectionResolver serviceResolver = DependencyInjectionPool.instance().getResolver (Constants.servicesInterfacesPath);
 
-		serviceResolver.bind (ISecondService.class, SecondService.class)
-		               .resolveDependenciesOfInterface (ISecondService.class, null);
+		serviceResolver.bind (IThirdService.class, ThirdService.class)
+		               .resolveDependenciesOfInterface (IThirdService.class, null);
 
-        iSecondService = serviceResolver.getImplementation (ISecondService.class, null);
+        iThirdService = serviceResolver.getImplementation (IThirdService.class, null);
     }
 
 
     @Test
-    public void enteringAtSecondServiceTest() {
+    public void enteringAtThirdServiceTest() {
 
-        assertEquals ("Second service / Test dao alternative", iSecondService.enteringAtSecondService());
+        assertEquals ("Third service / First test qualifier dao alternative / Second test qualifier dao alternative"
+        		     ,iThirdService.enteringAtThirdService());
     }
 
 }

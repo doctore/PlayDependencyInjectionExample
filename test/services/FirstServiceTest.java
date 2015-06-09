@@ -25,9 +25,9 @@ public class FirstServiceTest {
 
     	serviceResolver.bind (IFirstService.class, FirstService.class)
                        .bind (ISecondService.class, SecondServiceAlt.class)
-                       .resolveDependenciesOfInterface (IFirstService.class);
+                       .resolveDependenciesOfInterface (IFirstService.class, null);
 
-        iFirstService = serviceResolver.getImplementation (IFirstService.class);
+        iFirstService = serviceResolver.getImplementation (IFirstService.class, null);
     }
 
 

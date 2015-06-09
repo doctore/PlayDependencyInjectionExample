@@ -6,7 +6,7 @@ libraryDependencies ++= Seq(
    javaJdbc
   ,javaEbean
   ,cache
-  ,"org.reflections" % "reflections" % "0.9.9-RC2" withSources() withJavadoc()
+  ,"org.reflections" % "reflections" % "0.9.10" withSources() withJavadoc()
 )     
 
 play.Project.playJavaSettings
