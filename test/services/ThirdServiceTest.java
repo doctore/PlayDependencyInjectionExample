@@ -27,7 +27,7 @@ public class ThirdServiceTest {
 
 		DependencyInjectionResolver serviceResolver = DependencyInjectionPool.instance().getResolver (Constants.servicesInterfacesPath);
 
-		serviceResolver.bind (IThirdService.class, ThirdService.class)
+		serviceResolver.bind (IThirdService.class, ThirdService.class, null)
 		               .resolveDependenciesOfInterface (IThirdService.class, null);
 
         iThirdService = serviceResolver.getImplementation (IThirdService.class, null);

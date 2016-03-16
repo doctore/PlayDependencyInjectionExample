@@ -1,5 +1,4 @@
 import org.play.dependencyinjection.DependencyInjectionPool;
-import org.play.dependencyinjection.exceptions.DependencyInjectionException;
 import org.play.dependencyinjection.resolvers.DependencyInjectionResolver;
 
 import configuration.Constants;
@@ -10,7 +9,6 @@ import play.mvc.Controller;
 import services.spi.IService;
 
 public class Global extends GlobalSettings {
-
 
 	@Override
 	public void onStart (Application app) {
@@ -27,8 +25,21 @@ public class Global extends GlobalSettings {
 								              .initializeControllersResolver (Constants.controllersImplementationPath
 								            		                         ,Controller.class);
 
-		} catch (DependencyInjectionException e) {
-			Logger.error ("Error when initializes the dependency injection", e);
+		} catch (Exception e) {
+			Logger.error ("There was an error starting the application", e);
+		}
+	}
+
+
+	@Override
+	public void onStop (Application app) {
+		
+		try {
+			// Initializes the dependency injection
+			DependencyInjectionPool.instance().destroyResources();
+
+		} catch (Exception e) {
+			Logger.error ("There was an error stopping the application", e);
 		}
 	}
 

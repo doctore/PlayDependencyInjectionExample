@@ -27,7 +27,7 @@ public class SecondServiceTest {
 
 		DependencyInjectionResolver serviceResolver = DependencyInjectionPool.instance().getResolver (Constants.servicesInterfacesPath);
 
-		serviceResolver.bind (ISecondService.class, SecondService.class)
+		serviceResolver.bind (ISecondService.class, SecondService.class, null)
 		               .resolveDependenciesOfInterface (ISecondService.class, null);
 
         iSecondService = serviceResolver.getImplementation (ISecondService.class, null);

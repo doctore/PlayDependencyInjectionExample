@@ -22,7 +22,7 @@ public class TestDaoTest {
 
     	DependencyInjectionResolver daoResolver = new DependencyInjectionResolver (Constants.daosInterfacesPath);
 
-    	daoResolver.bind (ITestDao.class, TestDao.class)
+    	daoResolver.bind (ITestDao.class, TestDao.class, null)
                    .resolveDependenciesOfInterface (ITestDao.class, null);
 
     	iTestDao = daoResolver.getImplementation (ITestDao.class, null);

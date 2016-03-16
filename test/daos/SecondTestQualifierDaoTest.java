@@ -22,7 +22,7 @@ public class SecondTestQualifierDaoTest {
 
     	DependencyInjectionResolver daoResolver = new DependencyInjectionResolver (Constants.daosInterfacesPath);
 
-    	daoResolver.bind (ITestQualifierDao.class, FirstTestQualifierDao.class)
+    	daoResolver.bind (ITestQualifierDao.class, FirstTestQualifierDao.class, null)
                    .resolveDependenciesOfInterface (ITestQualifierDao.class, null);
 
     	iTestQualifierDao = daoResolver.getImplementation (ITestQualifierDao.class, null);

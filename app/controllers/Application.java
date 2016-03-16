@@ -20,7 +20,7 @@ public class Application extends Controller {
 	@WithDependencyInjection
 	private static ITestQualifierDao firstTestQualifierDao;
 
-	@WithDependencyInjection(qualifier="secondTestQualifierDao")
+	@WithDependencyInjection("secondTestQualifierDao")
 	private static ITestQualifierDao secondTestQualifierDao;
 
 

@@ -23,8 +23,8 @@ public class FirstServiceTest {
 
     	DependencyInjectionResolver serviceResolver = new DependencyInjectionResolver (Constants.servicesInterfacesPath);
 
-    	serviceResolver.bind (IFirstService.class, FirstService.class)
-                       .bind (ISecondService.class, SecondServiceAlt.class)
+    	serviceResolver.bind (IFirstService.class, FirstService.class, null)
+                       .bind (ISecondService.class, SecondServiceAlt.class, null)
                        .resolveDependenciesOfInterface (IFirstService.class, null);
 
         iFirstService = serviceResolver.getImplementation (IFirstService.class, null);
